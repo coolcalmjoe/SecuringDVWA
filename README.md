@@ -88,7 +88,7 @@ Click the links below for deep-dives into the implementation details of each dom
 * **The "Grey Box" Feedback Loop:** This lab bridges the gap between Red Team and Blue Team. I utilize a **Reverse SSH Tunnel** to connect the remote container's Xdebug service to my local IDE, allowing me to step through code execution while I validate DAST results.
 * **Runtime Instrumentation:** The application runtime is **heavily instrumented** and **"sensor-rich."** While the application remains vulnerable by design for research, I integrated **OpenRASP** (in monitoring mode) and **Xdebug** to capture granular telemetry of every exploit, providing "Glass Box" visibility that standard labs lack.
 * **Intelligent Reporting Orchestration:** Vulnerability data is not just dumped into a console; it is routed to the correct system of record:
-    * **DefectDojo:** Aggregates actionable security findings from ZAP, Semgrep, openVAS, and Trivy.
+    * **DefectDojo:** Aggregates actionable security findings from ZAP, Semgrep, OpenVAS, and Trivy.
     * **Dependency-Track:** Monitors long-term Supply Chain risk (SBOMs).
     * **SonarQube:** Tracks Code Quality and Technical Debt.
 
