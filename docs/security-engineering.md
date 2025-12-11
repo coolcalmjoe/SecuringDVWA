@@ -1,8 +1,6 @@
 ---
 
 #### **2. Security Engineering Page (`docs/security-engineering.md`)**
-
-```markdown
 # Security Engineering: Architecture & Hardening
 
 ## 1. The Threat Model
@@ -19,20 +17,20 @@ I implemented a strict network isolation strategy using Docker Compose networks 
 ```mermaid
 flowchart LR
     subgraph "Public Internet"
-    User((User/Attacker))
+        User((User/Attacker))
     end
 
     subgraph "Host Machine"
         subgraph "Proxy-Net (DMZ)"
-        WAF[Nginx WAF]
+            WAF[Nginx WAF]
         end
 
         subgraph "Bridge Zone"
-        App[DVWA App]
+            App[DVWA App]
         end
 
         subgraph "DB-Net (Trusted)"
-        DB[(MariaDB)]
+            DB[(MariaDB)]
         end
     end
 
@@ -41,6 +39,6 @@ flowchart LR
     App --3306--> DB
     User -.->|BLOCKED| App
     User -.->|BLOCKED| DB
+    
     style DB fill:#bfb,stroke:#333
     style WAF fill:#fbb,stroke:#333
-```
