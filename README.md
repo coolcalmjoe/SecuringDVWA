@@ -6,7 +6,7 @@
 
 This is an ongoing research project focused on architecting a **Secure SDLC** for the "Damn Vulnerable Web App" (DVWA). Rather than just exploiting vulnerabilities, I am building the ecosystem required to manage them. I established a CI/CD pipeline in GitLab to enforce automated security gates, utilizing **Semgrep**, **Trivy**, and **SonarQube** for static analysis, and **OWASP ZAP** for dynamic validation.
 
-Simultaneously, I am constructing a layered defense architecture to move from a flat network to a segmented, monitored environment. This includes **database isolation**, an **Nginx Proxy Manager** for future WAF implementation, and planned network monitoring with **Suricata**. To facilitate deep-dive research, I have instrumented the application runtime with **OpenRASP** (in monitoring mode) and **Xdebug**. This setup enables **"Grey Box" analysis**, allowing me to correlate external HTTP attacks directly with internal PHP code execution before actively tuning the defenses.
+Simultaneously, I am constructing a layered defense architecture to move from a flat network to a segmented, monitored environment. This includes **database isolation**, an **Nginx Proxy Manager** for future WAF implementation, and network monitoring with **Suricata**. To facilitate deep-dive research, I have instrumented the application runtime with **OpenRASP** (in monitoring mode) and **Xdebug**. This setup enables **"Grey Box" analysis**, allowing me to correlate external HTTP attacks directly with internal PHP code execution before actively tuning the defenses.
 
 **Objective:** To simulate the hardening of a legacy application by orchestrating four core domains: Security Engineering, DevSecOps, Vulnerability Management, and AppSec Research. I am utilizing this lab to:
 * Map technical exploits to **NIST SP 800-53** control failures.
@@ -73,10 +73,10 @@ Click the links below for deep-dives into the implementation details of each dom
 
 | Domain | Focus Area | Key Technologies |
 | :--- | :--- | :--- |
-| [**Security Engineering**](docs/security-engineering.md) | Network Segmentation & Defense | Docker Networks, Nginx Proxy Manager, OPNsense, Suricata, MariaDB |
-| [**DevSecOps**](docs/devsecops.md) | CI/CD Automation & Supply Chain | GitLab CI, Trivy (FS/Config/Image), Semgrep, SonarQube, Dependency-Track |
-| [**AppSec Research**](docs/appsec-research.md) | Exploit Analysis & "Grey Box" Debugging | Xdebug, OpenRASP (IAST), OWASP ZAP, Kali Linux, Burp Suite |
-| [**Vulnerability Management**](docs/vuln-mgmt.md) | Centralized Aggregation & Metrics | DefectDojo | OpenVAS
+| [**Security Engineering**](docs/security-engineering.md) | Network Segmentation & Defense | Docker Networks, Nginx Proxy Manager, OPNsense, Suricata |
+| [**DevSecOps**](docs/devsecops.md) | CI/CD Automation & Supply Chain | GitLab CI, Trivy, Semgrep, SonarQube, Dependency-Track |
+| [**AppSec Research**](docs/appsec-research.md) | Exploit Analysis & "Grey Box" Debugging | Xdebug, OpenRASP, OWASP ZAP, Burp Suite |
+| [**Vulnerability Management**](docs/vuln-mgmt.md) | Centralized Aggregation & Metrics | DefectDojo, OpenVAS |
 
 ---
 
