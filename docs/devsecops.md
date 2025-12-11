@@ -67,7 +67,7 @@ This stage enforces **Segregation of Duties** by splitting scans into two distin
 <details>
 <summary>📸 <strong>View Dependency-Track SBOM Analysis</strong></summary>
 
-![Dependency-Track Dashboard](../images/deptrack-dashboard.png)
+![Dependency-Track Dashboard](../assets/dvwa_dt.png)
 *Monitors third-party libraries for license risk and outdated versions.*
 </details>
 
