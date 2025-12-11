@@ -68,6 +68,9 @@ graph LR
     class DMZ_Zone dmz
     class Trusted_Zone trusted
 ```
+
+---
+
 ## 3. Project Domains
 Click the links below for deep-dives into the implementation details of each domain.
 
@@ -90,4 +93,5 @@ Click the links below for deep-dives into the implementation details of each dom
     * **SonarQube:** Tracks Code Quality and Technical Debt.
 
 ---
+
 *Created by Joseph Dennis*
