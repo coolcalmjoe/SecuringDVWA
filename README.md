@@ -29,3 +29,26 @@ graph TD
     style WAF fill:#f9f,stroke:#333,stroke-width:2px
     style App fill:#bbf,stroke:#333,stroke-width:2px
     style DB fill:#dfd,stroke:#333,stroke-width:2px
+```
+
+## 3. Project Domains
+Click the links below for deep-dives into the implementation details of each domain.
+
+| Domain | Focus Area | Key Technologies |
+| :--- | :--- | :--- |
+| [**Security Engineering**](docs/security-engineering.md) | Network Segmentation & WAF | Docker Networks, Nginx, ModSecurity |
+| [**DevSecOps**](docs/devsecops.md) | CI/CD Automation & Orchestration | GitLab CI, DefectDojo, Trivy, Semgrep |
+| [**AppSec & Vuln Mgmt**](docs/appsec-research.md) | Exploit Analysis & Remediation | Xdebug, OpenRASP, OWASP ZAP |
+
+---
+
+## 4. Key Differentiators
+* **Grey Box Instrumentation:** The build artifact includes baked-in security agents (OpenRASP) and debugging tools (Xdebug) that are disabled by default but can be toggled for advanced "Lab Mode" testing.
+* **Multi-Destination Reporting:** Vulnerabilities are intelligently routed:
+    * **DefectDojo:** Aggregates findings from SAST, DAST, and Container scans.
+    * **Dependency-Track:** Manages SBOM and License Risk.
+    * **SonarQube:** Tracks Code Quality and Technical Debt.
+* **Zero-Trust Networking:** The runtime environment enforces strict isolation between the Web Application, Database, and WAF.
+
+---
+*Created by [Your Name]*
