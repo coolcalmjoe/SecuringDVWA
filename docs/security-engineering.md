@@ -15,7 +15,7 @@ This architecture simulates a realistic Risk Management workflow found in mature
 
 ## 2. Network Segmentation Strategy
 
-I implemented a strict network isolation strategy using Docker Compose networks to create three distinct zones. This prevents lateral movement and enforces a "deny-by-default" traffic policy (Mapped to **NIST SC-7: Boundary Protection**).
+I implemented a strict network isolation strategy using Docker Compose networks to create three distinct zones. This prevents lateral movement and enforces a "deny-by-default" traffic policy (Mapped to [**NIST SC-7: Boundary Protection**](https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/release-search#!/control?version=5.1&number=SC-7)).
 
 ```mermaid
 graph LR
